@@ -9,7 +9,7 @@ class Index extends Controller
     public function index()
     {
         $data = Song::select();
-        if($data) {
+        if(!$data) {
             return error('很抱歉，好像没有歌曲了');
         }
         return success($data);
