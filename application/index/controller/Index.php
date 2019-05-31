@@ -20,7 +20,7 @@ class Index extends Controller
     {
         $params = Request::post();
         $validate = Validate::make([
-            'song_name' => 'require|unique:song,song_name',
+            'song_name' => 'require',
             'singer'    => 'require',
             'link'      => 'require'
         ]);
